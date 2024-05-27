@@ -10,58 +10,66 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&family=Stick+No+Bills:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
-</head>
+</head>  
 
 <body>
   <div class="container">
-    <div class="site-header">
-      <h1>Jam Box Studios</h1>
-      <div class="main-nav">
+    <al class="skip-links">
+      <li><a href="#nav">skip to navigation</a></li>
+      <li><a href="#main">skip to the main content</a></li>
+    </al>
+    <header class="header" role="banner" itemscope itemtype="http://schema.org/Organization">
+      <h1 itemprop="name">Jam Box Studios</h1>
+      <nav class="navigation" aria-label="Navigation" role="navigation" id="nav">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Reservation</a></li>
-          <li><a href="#">Studio</a></li>
+          <li><a href="#" itemprop="url">Home</a></li>
+          <li><a href="#" itemprop="url">Products</a></li>
+          <li><a href="#" itemprop="url">Reservation</a></li>
+          <li><a href="#" itemprop="url">Studio</a></li>
         </ul>
-      </div>
-      <img src="https://placekitten.com/1200/900" class="banner">
-    </div>
-    <div class="main-content">
+      </nav>
+      <img src="https://placekitten.com/1200/900" class="image" alt="A kitten's picture" itemprop="image">
+    </header>
+
+    <main class="main" id="main" role="main">
       <h1>Welcome to Jam Box</h1>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
-      <div class="owner">
+      <section class="ownerinfo" itemscope itemtype="http://schema.org/Person">
         <h1>Meet the owner</h1>
         <ul>
-          <li>Name: John Doe</li>
-          <li>Title: CEO</li>
-          <li>Email: johnjoe@jambox.ca</li>
-          <li>Phone: 613-000-0000</li>
+          <li>Name:John Doe</li>
+          <li>Title:CEO</li>
+          <li>Email:<a href="mailto:johnjoe@jambox.ca" itemprop="email">johnjoe@jambox.ca</a></li>
+          <li>Phone:<a href="tel:613-000-0000" itemprop="telephone">613-000-0000</a></li>
         </ul>
         <h1>Address</h1>
+        <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
         <p>
           Jambox Studios
           123 Guitar Road,
           Musicville, Danceistan
           B3T 0L0
-        </p>
-      </div>
-      <div class="contact-section">
+        </p></address>
+      </section>
+      <section class="section">
         <h1>Contact Us</h1>
-        <form action="thanks.html">
-          <label>Full Name</label>
-          <input type="text" placeholder="Full Name">
-          <input type="text" placeholder="Email">
-          <input type="text" placeholder="Subject">
-          <b>Your Message</b>
-          <textarea></textarea>
+        <form action="thanks.html" role="form">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Full Name">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Email">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Subject">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Your Message"></textarea>
           <button type="submit">Send</button>
         </form>
-      </div>
-    </div>
-    <div class="site-footer">
+      </section>
+    </main>
+    <footer class="footer" role="contentinfo">
       &copy; 2021 Jam Box Studios
-    </div>
+    </footer>
   </div>
 </body>
 
